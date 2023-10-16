@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="css/custom-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+    />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script> -->
+  </head>
+  <body>
+    <section class="header">
+      <div class="container-fluid p-0">
+        <div class="imageWrapper"><span></span></div>
+        <div class="boxContent py-2">
+          <div class="row align-items-center">
+            <div class="col-md-2 userimg">
+              <div class="roundimage ofit">
+                <img src="images/bg-3-main-min.jpg" alt="" />
+              </div>
+            </div>
+            <div class="col-md-10 userdata">
+              <div class="row align-items-end justify-content-between">
+                <div class="col-md-8">
+                  <div
+                    class="leftsec d-flex flex-column align-items-center align-items-md-start text-center text-md-start"
+                  >
+                    <div class="user-name">
+                      <h1>Ashish</h1>
+                    </div>
+                    <div class="other-text">
+                      <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nam, consectetur impedit quo facere, inventore amet
+                        sequi eveniet.</span
+                      >
+                    </div>
+                    <div class="custom-btn">
+                      <a class="d-flex align-items-center" href="#">
+                        <i class="fal fa-angle-right me-2"></i>
+                        <p class="text-capitalize">click here</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div
+                    class="right-sec d-flex flex-grow-1 align-items-center justify-content-evenly"
+                  >
+                    <div class="iconBox">
+                      <a href="#">
+                        <i class="fa-brands fa-meta" style="color: #3b5998"></i>
+                      </a>
+                    </div>
+                    <div class="iconBox">
+                      <a href="#">
+                        <i
+                          class="fa-brands fa-x-twitter"
+                          style="color: #000000"
+                        ></i>
+                      </a>
+                    </div>
+                    <div class="iconBox">
+                      <a href="#">
+                        <i
+                          class="fa-brands fa-whatsapp"
+                          style="color: #075e54"
+                        ></i>
+                      </a>
+                    </div>
+                    <div class="iconBox">
+                      <a href="#">
+                        <i
+                          class="fa-brands fa-instagram"
+                          style="
+                            background: radial-gradient(
+                              circle at 30% 107%,
+                              #fdf497 0%,
+                              #fdf497 5%,
+                              #fd5949 45%,
+                              #d6249f 60%,
+                              #285aeb 90%
+                            );
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                          "
+                        ></i>
+                      </a>
+                    </div>
+                    <div class="iconBox">
+                      <a href="#">
+                        <i
+                          class="fa-brands fa-pinterest"
+                          style="color: #e60023"
+                        ></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <header class="pagenav">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="blog">
+      <div class="container-fluid p-0">
+        <div class="blog-grid">
+          <div class="img1 ofit">
+            <img src="images/bg-2-main-min.jpg" alt="" />
+          </div>
+          <div class="img2 ofit">
+            <img src="images/bg-2-main-min.jpg" alt="" />
+          </div>
+          <div class="img3 ofit">
+            <img src="images/bg-2-main-min.jpg" alt="" />
+          </div>
+          <div class="img4 ofit">
+            <img src="images/bg-2-main-min.jpg" alt="" />
+          </div>
+          <div class="img5 ofit">
+            <img src="images/bg-2-main-min.jpg" alt="" />
+          </div>
+          <div class="img6 ofit">
+            <img src="images/bg-2-main-min.jpg" alt="" />
+          </div>
+          <div class="img7 ofit">
+            <img src="images/bg-2-main-min.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

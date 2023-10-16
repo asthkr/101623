@@ -1,0 +1,105 @@
+body {
+  font-family: "Josefin Sans", sans-serif !important;
+  font-weight: 400 !important;
+  background-color: #1e1e1e !important;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+}
+.header .imageWrapper {
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 75px;
+}
+.header .imageWrapper span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg-2-main-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.header .boxContent {
+  position: absolute;
+  bottom: -75px;
+  width: 100%;
+  padding: 0 10vw;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.header .boxContent .userimg .roundimage {
+  width: 125px;
+  height: 125px;
+  border-radius: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.header .boxContent .userdata .leftsec {
+  gap: 5px;
+}
+.header .boxContent .userdata .leftsec .user-name h1 {
+  font-size: 22px;
+}
+.header .boxContent .userdata .right-sec .iconBox i {
+  font-size: 22px;
+}
+
+.blog {
+  width: 100%;
+}
+.blog .blog-grid {
+  height: 100vh;
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-auto-columns: 2fr 1fr 1fr;
+  grid-auto-rows: 1fr 1fr;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "img1 img1 img1 img2 img2 img2 img2 img2" "img1 img1 img1 img2 img2 img2 img2 img2" "img3 img3 img3 img3 img3 img4 img4 img4" "img5 img5 img5 img6 img6 img4 img4 img4" "img5 img5 img5 img6 img6 img7 img7 img7";
+}
+.blog .blog-grid .img1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  grid-area: img1;
+}
+.blog .blog-grid .img2 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  grid-area: img2;
+}
+.blog .blog-grid .img3 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  grid-area: img3;
+}
+.blog .blog-grid .img4 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  grid-area: img4;
+}
+.blog .blog-grid .img5 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  grid-area: img5;
+}
+.blog .blog-grid .img6 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  grid-area: img6;
+}
+.blog .blog-grid .img7 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  grid-area: img7;
+}/*# sourceMappingURL=style.css.map */
