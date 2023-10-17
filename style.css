@@ -1,7 +1,7 @@
 body {
   font-family: "Josefin Sans", sans-serif !important;
   font-weight: 400 !important;
-  background-color: #1e1e1e !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .header {
@@ -51,55 +51,224 @@ body {
   width: 100%;
 }
 .blog .blog-grid {
+  padding: 3px;
   height: 100vh;
   display: grid;
   grid-auto-flow: column dense;
   grid-auto-columns: 2fr 1fr 1fr;
   grid-auto-rows: 1fr 1fr;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "img1 img1 img1 img2 img2 img2 img2 img2" "img1 img1 img1 img2 img2 img2 img2 img2" "img3 img3 img3 img3 img3 img4 img4 img4" "img5 img5 img5 img6 img6 img4 img4 img4" "img5 img5 img5 img6 img6 img7 img7 img7";
+  grid-template-columns: repeat(8, 2fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 3px;
+  grid-template-areas: "img1 img1 img1 img1 img2 img2 img2 img7" "img1 img1 img1 img1 img2 img2 img2 img7" "img5 img3 img3 img6 img2 img2 img2 img7" "img5 img3 img3 img6 img2 img2 img2 img7" "img5 img3 img3 img6 img4 img4 img4 img4" "img5 img3 img3 img6 img4 img4 img4 img4";
 }
-.blog .blog-grid .img1 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  grid-area: img1;
-}
-.blog .blog-grid .img2 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  grid-area: img2;
-}
-.blog .blog-grid .img3 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  grid-area: img3;
-}
-.blog .blog-grid .img4 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  grid-area: img4;
-}
-.blog .blog-grid .img5 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  grid-area: img5;
-}
-.blog .blog-grid .img6 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  grid-area: img6;
-}
+.blog .blog-grid .img1,
+.blog .blog-grid .img2,
+.blog .blog-grid .img3,
+.blog .blog-grid .img4,
+.blog .blog-grid .img5,
+.blog .blog-grid .img6,
 .blog .blog-grid .img7 {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+.blog .blog-grid .img1 img,
+.blog .blog-grid .img2 img,
+.blog .blog-grid .img3 img,
+.blog .blog-grid .img4 img,
+.blog .blog-grid .img5 img,
+.blog .blog-grid .img6 img,
+.blog .blog-grid .img7 img {
+  height: 110%;
+  bottom: 0;
+  filter: brightness(100%);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.5s ease-in-out;
+}
+.blog .blog-grid .img1:hover img,
+.blog .blog-grid .img2:hover img,
+.blog .blog-grid .img3:hover img,
+.blog .blog-grid .img4:hover img,
+.blog .blog-grid .img5:hover img,
+.blog .blog-grid .img6:hover img,
+.blog .blog-grid .img7:hover img {
+  transform: scaleX(1.2);
+  top: -10%;
+  filter: brightness(70%);
+}
+.blog .blog-grid .img1:hover .text,
+.blog .blog-grid .img2:hover .text,
+.blog .blog-grid .img3:hover .text,
+.blog .blog-grid .img4:hover .text,
+.blog .blog-grid .img5:hover .text,
+.blog .blog-grid .img6:hover .text,
+.blog .blog-grid .img7:hover .text {
+  bottom: 0;
+  opacity: 1;
+}
+.blog .blog-grid .img1:hover .text p,
+.blog .blog-grid .img2:hover .text p,
+.blog .blog-grid .img3:hover .text p,
+.blog .blog-grid .img4:hover .text p,
+.blog .blog-grid .img5:hover .text p,
+.blog .blog-grid .img6:hover .text p,
+.blog .blog-grid .img7:hover .text p {
+  opacity: 1;
+}
+.blog .blog-grid .img1 h2,
+.blog .blog-grid .img2 h2,
+.blog .blog-grid .img3 h2,
+.blog .blog-grid .img4 h2,
+.blog .blog-grid .img5 h2,
+.blog .blog-grid .img6 h2,
+.blog .blog-grid .img7 h2 {
+  color: #fff;
+  display: inline-block;
+  font-weight: 300;
+  margin-bottom: 5px;
+  position: relative;
+}
+.blog .blog-grid .img1 .text,
+.blog .blog-grid .img2 .text,
+.blog .blog-grid .img3 .text,
+.blog .blog-grid .img4 .text,
+.blog .blog-grid .img5 .text,
+.blog .blog-grid .img6 .text,
+.blog .blog-grid .img7 .text {
+  bottom: -100%;
+  opacity: 0;
+  padding: 15px;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.blog .blog-grid .img1 .text p,
+.blog .blog-grid .img2 .text p,
+.blog .blog-grid .img3 .text p,
+.blog .blog-grid .img4 .text p,
+.blog .blog-grid .img5 .text p,
+.blog .blog-grid .img6 .text p,
+.blog .blog-grid .img7 .text p {
+  opacity: 0;
+  color: #fff;
+  font-weight: 300;
+}
+.blog .blog-grid .img1 {
+  grid-area: img1;
+}
+.blog .blog-grid .img2 {
+  grid-area: img2;
+}
+.blog .blog-grid .img3 {
+  grid-area: img3;
+}
+.blog .blog-grid .img4 {
+  grid-area: img4;
+}
+.blog .blog-grid .img5 {
+  grid-area: img5;
+}
+.blog .blog-grid .img6 {
+  grid-area: img6;
+}
+.blog .blog-grid .img7 {
   grid-area: img7;
+}
+
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  padding-bottom: 25px;
+  position: relative;
+  background-color: black;
+}
+.footer .footer-top {
+  height: 160px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -80px;
+  background-color: #28575d;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer .footer-top .custom-btn {
+  margin: auto 0;
+  padding: 10px 50px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: white;
+  text-transform: uppercase;
+}
+.footer .footer-content {
+  padding-top: 125px;
+}
+.footer .footer-content .logoftr {
+  color: #fff;
+}
+.footer .footer-content form label {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer .footer-content form input[type=email] {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 0;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+.footer .footer-content form input[type=email]::-moz-placeholder {
+  font-size: 14px;
+}
+.footer .footer-content form input[type=email]::placeholder {
+  font-size: 14px;
+}
+.footer .footer-content form input[type=button] {
+  padding: 10px 15px;
+  border-radius: 0;
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  color: #28575d;
+  border: 2px solid #28575d;
+}
+.footer .footer-content form input[type=button]:hover {
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+.footer .footer-content .cont-links h5 {
+  color: #fff;
+}
+.footer .footer-content .cont-links .circleicon i {
+  font-size: 18px;
+  color: white;
+}
+.footer .footer-content .cont-links p {
+  color: #fff;
+}
+.footer .footer-content .div-line {
+  margin: 25px 0;
+  display: flex;
+  flex-grow: 1;
+  height: 1px;
+  background: #666666;
+}
+.footer .footer-content .rights {
+  font-size: 14px;
+  color: #ababab;
+}
+.footer .footer-content .terms {
+  display: flex;
+  gap: 25px;
+}
+.footer .footer-content .terms a {
+  font-size: 14px;
+  color: #ababab;
 }/*# sourceMappingURL=style.css.map */
