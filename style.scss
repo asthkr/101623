@@ -63,6 +63,9 @@ body {
     right: 0;
     left: 0;
     z-index: 999;
+    .navbar-toggler {
+      border: none;
+    }
   }
 }
 .blog {
@@ -125,6 +128,7 @@ body {
       h2 {
         color: #fff;
         display: inline-block;
+        padding-top: 20px;
         font-weight: 300;
         margin-bottom: 5px;
         position: relative;
@@ -166,13 +170,59 @@ body {
     }
   }
 }
-
+.we-do {
+  padding: 75px 0;
+  .outerBox {
+    position: relative;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 25px 0;
+    text-align: center;
+    &:hover .v-imgBox {
+      top: -10px;
+      opacity: 1;
+      transition: all 200ms linear;
+      i {
+        transform: scale(3.5);
+        color: #ababab;
+        transition: all 200ms linear;
+      }
+    }
+    .v-imgBox {
+      position: absolute;
+      top: 20px;
+      opacity: 0;
+      z-index: 9;
+      transition: all 500ms linear;
+      i {
+        color: #28575d;
+        transition: all 500ms linear;
+      }
+    }
+    .textBox {
+      position: inherit;
+      z-index: 10;
+      padding: 10px;
+      .headText {
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      .otrText {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
 .footer {
   margin-top: 100px;
   width: 100%;
   padding-bottom: 25px;
   position: relative;
   background-color: black;
+
   .footer-top {
     height: 160px;
     padding: 20px;
@@ -185,12 +235,48 @@ body {
     left: 50%;
     transform: translateX(-50%);
     .custom-btn {
+      position: relative;
       margin: auto 0;
       padding: 10px 50px;
       background-color: transparent;
-      border: 2px solid #fff;
       color: white;
       text-transform: uppercase;
+      &:hover::after {
+        width: 100%;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 44px;
+        top: -2px;
+        right: -6px;
+        border: 1px solid #fff;
+        border-left: none;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 44px;
+        top: -2px;
+        left: -6px;
+        border: 1px solid #fff;
+        border-right: none;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+      }
     }
   }
   .footer-content {
@@ -221,6 +307,7 @@ body {
         background-color: transparent;
         color: #28575d;
         border: 2px solid #28575d;
+        border-left: none;
         &:hover {
           background-color: #fff;
           border: 2px solid #fff;
@@ -263,16 +350,41 @@ body {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .blog .blog-grid {
-    height: 150vh;
+    height: 200vh;
+    grid-template-columns: repeat(5, 2fr);
     grid-template-areas:
-      "img1 img1 img1 img4 img4 img7 img7 img7 img7 img7"
-      "img1 img1 img1 img4 img4 img7 img7 img7 img7 img7"
-      "img1 img1 img1 img4 img4 img7 img7 img7 img7 img7"
-      "img2 img2 img3 img3 img5 img5 img5 img5 img6 img6"
-      "img2 img2 img3 img3 img5 img5 img5 img5 img6 img6"
-      "img2 img2 img3 img3 img5 img5 img5 img5 img6 img6";
+      "img1 img1 img1 img4 img4"
+      "img1 img1 img1 img4 img4 "
+      "img1 img1 img1 img4 img4"
+      "img2 img2 img3 img3 img3"
+      "img2 img2 img3 img3 img3 "
+      "img2 img2 img3 img3 img3 "
+      " img7 img7 img7 img7 img7"
+      " img7 img7 img7 img7 img7"
+      " img7 img7 img7 img7 img7"
+      " img5 img5 img5 img6 img6"
+      " img5 img5 img5 img6 img6"
+      "img5 img5 img5 img6 img6";
+  }
+  .we-do {
+    padding: 75px 0;
+    .outerBox {
+      &:hover .v-imgBox {
+        top: 0;
+        i {
+          transform: scale(3);
+        }
+      }
+      .v-imgBox {
+        position: static;
+        opacity: 1;
+        i {
+          transform: scale(3);
+        }
+      }
+    }
   }
 }
 
